@@ -11,8 +11,6 @@ volatile uint8_t A_state = 0;
 volatile uint8_t B_state = 0;
 volatile int R_count = 0;	
 	
-//void encoder_rotary(void);
-
 void encoder_rotary(void)
 {
 

@@ -6,8 +6,6 @@
 #define pin_A 6
 #define pin_B 5
 #define PIN PIND //or PINC or PINB
-#define add 10
-#define sub 1
 	
 volatile uint8_t A_state = 0;
 volatile uint8_t B_state = 0;
@@ -37,7 +35,7 @@ void encoder_rotary(void)
 		if (A_state) {
 			if (R_count < MAX)
 			{
-				R_count += add;
+				R_count++;
 			}
 			A_state = 0;  //reset
 		}
@@ -45,7 +43,7 @@ void encoder_rotary(void)
 		if (B_state) {
 			if (R_count > MIN)
 			{
-				R_count -= sub;			  
+				R_count--;			  
 			}
 			B_state = 0;  // reset
 		}
